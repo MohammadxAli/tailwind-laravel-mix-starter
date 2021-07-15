@@ -1,0 +1,31 @@
+html,
+body {
+    height: 100%;
+}
+
+html {
+    @include media-breakpoint-down(md) {
+        font-size: 95%;
+    }
+    @include media-breakpoint-down(sm) {
+        font-size: 90%;
+    }
+}
+
+body {
+    background-color: #f2f2f2;
+}
+
+button {
+    &:focus {
+        outline: 0 !important;
+    }
+}
+
+.shadow-inner-primary {
+    box-shadow: inset -3px -3px 8px rgba($black, 0.5);
+}
+
+.text-shadow {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
