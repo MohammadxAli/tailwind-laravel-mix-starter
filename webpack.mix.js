@@ -1,4 +1,4 @@
-const mix = require("laravel-mix");
+const mix = require('laravel-mix')
 
 /*
  |--------------------------------------------------------------------------
@@ -12,17 +12,22 @@ const mix = require("laravel-mix");
  */
 
 mix.autoload({
-    jquery: ["$", "window.jQuery", "jQuery"],
-});
+  jquery: ['$', 'window.jQuery', 'jQuery'],
+})
 
-mix.js("resources/js/main.js", "public/assets/js/bundle.js")
-    .sass("resources/scss/main.scss", "assets/css/styles.css")
-    .browserSync({
-        watch: true,
-        server: "public",
-        files: "public/**/*.*",
-        notify: false,
-    })
-    .disableNotifications()
-    .setPublicPath("public")
-    .sourceMaps();
+mix
+  .js('resources/js/main.js', 'public/assets/js/bundle.js')
+  .sass('resources/scss/main.scss', 'assets/css/styles.css')
+  .postCss('resources/css/tailwind.css', 'assets/css/tailwind.css', [
+    require('tailwindcss'),
+    require('postcss-preset-env'),
+  ])
+  .browserSync({
+    watch: true,
+    server: 'public',
+    files: 'public/**/*.*',
+    notify: false,
+  })
+  .disableNotifications()
+  .setPublicPath('public')
+  .sourceMaps()
