@@ -6,7 +6,6 @@ module.exports = {
             center: true,
             padding: theme("spacing.4"),
         }),
-        extend: {},
     },
     plugins: [
         require("@tailwindcss/typography"),

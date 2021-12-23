@@ -3,6 +3,3 @@
 # Laravel Mix files that are generated with npm watch/build commands
 /public/assets/
 /public/mix-manifest.json
-
-# Lock files
-package-lock.json
