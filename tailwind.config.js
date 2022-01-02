@@ -1,3 +1,5 @@
+/** @type {import("@types/tailwindcss/tailwind-config").TailwindConfig } */
+
 module.exports = {
     mode: "jit",
     purge: ["./resources/js/**/*.js", "./public/index.html"],
@@ -8,8 +10,8 @@ module.exports = {
         }),
     },
     plugins: [
-        require("@tailwindcss/typography"),
-        require("@tailwindcss/forms"),
+//         require("@tailwindcss/typography"),
+//         require("@tailwindcss/forms"),
         require("@tailwindcss/line-clamp"),
         require("@tailwindcss/aspect-ratio"),
         require("tailwindcss-logical"),
