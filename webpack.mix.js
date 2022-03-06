@@ -11,16 +11,16 @@ const mix = require("laravel-mix");
  |
  */
 
-mix.autoload({
-    jquery: ["$", "window.jQuery", "jQuery"],
-});
+// mix.autoload({
+//     jquery: ["$", "window.jQuery", "jQuery"],
+// });
 
-mix.js("resources/js/main.js", "public/assets/js/bundle.js")
-    .sass("resources/scss/main.scss", "assets/css/styles.css")
+mix.sass("resources/scss/main.scss", "assets/css/styles.css")
     .postCss("resources/css/tailwind.css", "assets/css/tailwind.css", [
         require("tailwindcss"),
         require("postcss-preset-env"),
     ])
+    // .js("resources/js/main.js", "public/assets/js/bundle.js")
     .browserSync({
         watch: true,
         server: "public",
