@@ -1,8 +1,7 @@
 /** @type {import("@types/tailwindcss/tailwind-config").TailwindConfig } */
 
 module.exports = {
-    mode: "jit",
-    purge: ["./resources/js/**/*.js", "./public/index.html"],
+    content: ["./resources/js/**/*.js", "./public/index.html"],
     theme: {
         container: (theme) => ({
             center: true,
